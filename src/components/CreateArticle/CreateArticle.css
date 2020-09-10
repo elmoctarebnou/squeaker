@@ -1,0 +1,51 @@
+.form-new-article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 85vh;
+  margin: 0 auto;
+}
+.form-new-article input{
+  font-size: 3rem;
+  width: 50vw;
+  height: 3vh;
+  margin: 2rem 0;
+}
+.form-new-article button{
+  font-size: 3rem;
+  width: 50vw;
+  height: 3vh;
+  margin: 2rem 0;
+  background-color: rgb(75, 95, 115);
+  color: white;
+  border: none;
+}
+.form-new-article button:hover{
+  opacity: .8;
+  cursor: pointer;
+}
+.form-new-article textarea{
+  font-size: 3rem;
+  width: 80vw;
+  height: 60vh;
+}
+@media only screen and (min-width: 1000px) {
+  .form-new-article{
+    margin-top: 2rem;
+  }
+  .form-new-article input{
+    font-size: 1.5rem;
+    height: 4vh;
+    margin: 1rem 0;
+  }
+  .form-new-article textarea{
+    font-size: 2rem;
+  }
+  .form-new-article button{
+    font-size: 2rem;
+    width: 150px;
+    height: 60px;
+    margin: 2rem 0;
+  }
+}

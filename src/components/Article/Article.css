@@ -1,0 +1,125 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  }
+.article h1{
+  font-size: 5rem;
+  
+}
+.article p {
+  font-size: 3rem;
+}
+.article button {
+  margin: 30px 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  border: none;
+  background-color: rgb(121, 40, 40);
+  color: white;
+  padding: 1rem;
+}
+.article button:hover{
+  opacity: .8;
+  cursor: pointer;
+}
+ul{
+  margin: 2rem auto;
+  padding: 0;
+}
+.new-comment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  width: 90vw;
+  padding: 1rem;
+  margin: 2rem auto;
+}
+.new-comment h1{
+  width: 80vw;
+  font-size: 3rem;
+  
+}
+.comments-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+textarea{
+  font-size: 3rem;
+  width: 80vw;
+  height: 15vh;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.comments-form button{
+  color: white;
+  background-color: rgb(75, 95, 115);
+  border: none;
+  margin: 10px 0 50px;
+  width: 20vw;
+  height: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.comments-form button:hover{
+  opacity: .8;
+}
+.new-comment li{
+  width: 80vw;
+  list-style: none;
+  font-size: 3rem;
+  border: 1px solid ;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+.new-comment li button {
+  height: 50px;
+  margin-top: 30px ;
+}
+@media only screen and (min-width: 1000px){
+  .article h1{
+    font-size: 2rem;
+  }
+  .article p {
+    font-size: 1.2rem;
+  }
+  .article button {
+    font-size: 1rem;
+    padding: .5rem;
+  }
+  .new-comment h1{
+    font-size: 1.5rem;
+  }
+  textarea{
+    font-size: 1.2rem;
+    width: 60vw;
+    height: 20vh;
+  }
+  .comments-form button{
+    font-size: 1.5rem;
+    width: 20vw;
+    height: 40px;
+    padding: .2rem;
+  }
+  .new-comment li{
+    font-size: 1.5rem;
+    width: 50vw;
+  }
+  .new-comment li button {
+    height: 30px;
+  }
+}

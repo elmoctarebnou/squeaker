@@ -1,0 +1,63 @@
+.hide {
+  display: none;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+a {
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+nav {
+  width: 100vw;
+  margin-bottom: 10rem;
+  padding: 1rem 0;
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+}
+.logo {
+  color: rgb(121, 40, 40);
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 1rem 1rem;
+}
+.register:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+.login:hover {
+  opacity: .8;
+  cursor: pointer;
+  margin-right: .5rem;
+}
+.login{
+  color: white;
+  background-color: rgb(121, 40, 40);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem;
+  
+}
+.button {
+  align-items: center;
+}
+@media only screen and (min-width: 1000px){
+  nav{
+    padding: .5rem 0;
+    margin-bottom: 5rem;
+  }
+  a{
+    font-size: 1rem;
+    margin:0 .5rem;
+  }
+  .logo{
+    font-size: 2rem;
+  }
+  .login{
+    padding: .5rem .8rem;
+  }
+
+}
