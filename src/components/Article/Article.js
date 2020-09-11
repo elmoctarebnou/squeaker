@@ -36,6 +36,7 @@ export default class Article extends React.Component {
     this.setState({comments: updatedComments});
   }
   handleSubmitNewComment = async (event) => {
+    event.preventDefault();
     const newComment = {
       text: this.state.newComment,
       article_id: this.state.id,
