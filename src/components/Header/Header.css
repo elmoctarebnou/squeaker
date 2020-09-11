@@ -13,10 +13,10 @@ a {
 }
 nav {
   width: 100vw;
+  height: 100px;
   margin-bottom: 10rem;
   padding: 1rem 0;
   background-color: rgb(255, 255, 255);
-  position: sticky;
 }
 .logo {
   color: rgb(121, 40, 40);
@@ -41,11 +41,12 @@ nav {
   padding: 1rem;
   
 }
-.button {
+nav .button {
   align-items: center;
 }
 @media only screen and (min-width: 1000px){
   nav{
+    height: 50px;
     padding: .5rem 0;
     margin-bottom: 5rem;
   }

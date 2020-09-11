@@ -35,7 +35,7 @@ export default class LoginForm extends React.Component {
           <h2>{this.state.loginError ? 'USERNAME OR PASSWORD WRONG!' : ''}</h2>
           <input onChange={this.handleUpdate} name='user_name' type='text' placeholder='Username' required></input>
           <br/>
-          <input onChange={this.handleUpdate} name='password' type='text' placeholder='Password' required></input>
+          <input type='password' onChange={this.handleUpdate} name='password' placeholder='Password' required></input>
           <br/>
           <button>Sign In</button>
         </form>

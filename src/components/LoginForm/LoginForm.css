@@ -16,9 +16,9 @@
   color: red;
 }
 .login-form input {
-  font-size: 2rem;
+  font-size: 3rem;
   width: 60vw;
-  height: 3vh;
+  height: 100px;
 }
 .login-form button {
   background-color: rgb(75, 95, 115);
@@ -26,6 +26,7 @@
   border: none;
   font-size: 2rem;
   padding: .5rem;
+  height: 100px;
   width: 50vw;
 }
 .login-form button:hover{
@@ -45,6 +46,7 @@
   }
   .login-form button {
     font-size: 1.3rem;
-    width: 20vw;
+    height: 50px;
+    width: 250px;
   }
 }

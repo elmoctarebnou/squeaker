@@ -37,8 +37,8 @@ class App extends React.Component{
         <Particles className='particles' params={particlesOption}/>
         <Header handleLogOut={this.handleLogOut} login={this.state}/>
         <Switch>
-          <Route exact path='/' render={(props) => this.state.login ? (<ArticlesList token={this.state.token} {...props}/>) : <LandingPage/>}/>
-          <Route exact path='/Register' render={(props) => this.state.login ? (<RegisterForm {...props}/>) : <LandingPage/>}/>
+          <Route exact path='/' render={(props) => this.state.login ? (<ArticlesList token={this.state.token} {...props}/>) : <RegisterForm {...props} handleLogin={this.handleLogin}/> }/>
+          <Route exact path='/Register' render={(props) => <RegisterForm {...props} handleLogin={this.handleLogin}/>}/>
           <Route exact path='/login' render={(props) => <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
           <Route exact path='/articles/:id' render={(props) => this.state.login ? (<Article {...props}/>) : <LandingPage/>}/>
           <Route exact path='/new-article' render={(props) => this.state.login ? (<CreateArticle {...props} user_id={this.state.user_id}/>) : <LandingPage/>}/>

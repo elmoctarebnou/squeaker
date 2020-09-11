@@ -6,7 +6,7 @@
   margin: 0 auto 5rem;
   padding: 2rem;
   width: 80vw;
-  height: 40vh;
+  height: 70vh;
 }
 .register-form h1{
   color: white;
@@ -16,9 +16,9 @@
   color: red;
 }
 .register-form input{
-  font-size: 2rem;
+  font-size: 3rem;
   width: 60vw;
-  height: 2vh;
+  height: 100px;
 }
 .register-form button {
   background-color: rgb(75, 95, 115);
@@ -26,6 +26,7 @@
   border: none;
   font-size: 2rem;
   padding: .5rem;
+  height: 100px;
   width: 50vw;
 }
 .register-form button:hover{
@@ -36,8 +37,8 @@
   .register-form {
     font-size: 1rem;
     width: 50vw;
-    height: 50vh;
-    margin-bottom: 20rem;
+    height: 800px;
+    margin-bottom: 15rem;
   }
   .register-form input{
     font-size: 1.3rem;
@@ -46,6 +47,7 @@
   }
   .register-form button{
     font-size: 1.3rem;
-    width: 30vw;
+    height: 50px;
+    width: 250px;
   }
 }

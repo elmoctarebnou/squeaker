@@ -4,12 +4,12 @@ footer{
   align-items: center;
   margin-top: 5rem;
   width: 100vw;
-  height: 3vh;
-  color: gray;
-  background-color: white;
+  height: px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 @media only screen and (min-width: 800px){
   footer{
-    height: 10vh;
+    height: 50px;
   }
 }

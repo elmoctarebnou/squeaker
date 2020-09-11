@@ -1,5 +1,6 @@
 import React from 'react';
 import ApiService from '../../services/api-service';
+import TokenService from '../../services/token-service'
 import './RegisterForm.css'
 
 
@@ -29,8 +30,12 @@ export default class RegisterForm extends React.Component {
         password: data.password,
         nickname: data.nick_name
       };
-      await ApiService.createUser(newUser);
-      this.props.history.push('/login');
+      const res = await ApiService.createUser(newUser);
+      console.log(res)
+      const {user, token} = res;
+      TokenService.saveAuthToken(token)
+      this.props.handleLogin(user.id);
+      this.props.history.push('/')
     };
   }
   
@@ -43,13 +48,11 @@ export default class RegisterForm extends React.Component {
           <h2>{this.state.error_password ? 'PASSWORDS DO NOT MATCH!' : ''}</h2>
           <input onChange={this.handleChange} name='full_name' type='text' placeholder='Full name' required></input>
           <br/>
-          <input onChange={this.handleChange} name='nick_name' type='text' placeholder='Nickname'></input>
-          <br/>
           <input onChange={this.handleChange} name='user_name' type='text' placeholder='Username' required></input>
           <br/>
-          <input onChange={this.handleChange} name='password' type='text' placeholder='Password' required></input>
+          <input onChange={this.handleChange} name='password' type='password' placeholder='Password' required></input>
           <br/>
-          <input onChange={this.handleChange} name='confirm_password' type='text' placeholder='Confirm Password' required></input>
+          <input onChange={this.handleChange} name='confirm_password' type='password' placeholder='Confirm Password' required></input>
           <br/>
           <button>Create an Account</button>
         </form>
