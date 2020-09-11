@@ -19,15 +19,16 @@ import './App.css';
 class App extends React.Component{
   state = {
     login: TokenService.hasAuthToken(),
-    user_id: null
+    user_id: TokenService.getUserId()
   }
   
-  handleLogin = (id) => {
-    this.setState({user_id: id, login: true})
+  handleLogin = () => {
+    this.setState({user_id: TokenService.getUserId(), login: true})
   }
   handleLogOut = () => {
     this.setState({user_id: null, login: false})
     TokenService.clearAuthToken();
+    
   }
   
   render(){

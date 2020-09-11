@@ -23,8 +23,8 @@ export default class LoginForm extends React.Component {
     }
     const res = await ApiService.loginUser(findUser);
     const {user, token} = res;
-    TokenService.saveAuthToken(token)
-    this.props.handleLogin(user.id);
+    TokenService.saveAuthToken(token, user.id)
+    this.props.handleLogin();
     this.props.history.push('/')
   }
   render(){

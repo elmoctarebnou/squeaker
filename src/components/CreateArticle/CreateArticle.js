@@ -11,7 +11,6 @@ export default class CreateArticleForm extends React.Component {
     this.setState({[event.currentTarget.name]: event.currentTarget.value})
   }
   handleSubmit = async (event) => {
-    event.preventDefault();
     try {
       const newArticle = {
       title: this.state.title,
