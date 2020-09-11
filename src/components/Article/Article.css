@@ -22,6 +22,7 @@
   background-color: rgb(121, 40, 40);
   color: white;
   padding: 1rem;
+  box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
 .article button:hover{
   opacity: .8;
@@ -40,6 +41,7 @@ ul{
   width: 90vw;
   padding: 1rem;
   margin: 2rem auto;
+  box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
 .new-comment h1{
   width: 80vw;
@@ -50,7 +52,7 @@ ul{
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
 textarea{
   font-size: 3rem;
@@ -59,6 +61,7 @@ textarea{
   padding: 1rem;
   margin-bottom: 1rem;
   border: 1px solid;
+  box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
 ul{
   display: flex;
@@ -74,6 +77,7 @@ ul{
   height: 50px;
   font-size: 2rem;
   cursor: pointer;
+  box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
 .comments-form button:hover{
   opacity: .8;
@@ -85,6 +89,7 @@ ul{
   border: 1px solid ;
   margin-bottom: 1.5rem;
   padding: 1rem;
+  box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
 .new-comment li button {
   height: 50px;

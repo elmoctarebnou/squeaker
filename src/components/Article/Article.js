@@ -36,12 +36,14 @@ export default class Article extends React.Component {
     this.setState({comments: updatedComments});
   }
   handleSubmitNewComment = async (event) => {
+    event.preventDefault();
     const newComment = {
       text: this.state.newComment,
       article_id: this.state.id,
       user_id: this.state.article.author_id
     }
     await ApiService.postComment(newComment);
+    this.props.history.push(`/articles/${this.state.id}`)
   }
   render(){
     const commentsList = this.state.comments.map((comment) => {
