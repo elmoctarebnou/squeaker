@@ -5,7 +5,7 @@ BLOGEME is a full stack blog app built as a capstone I project.
 REACT CSS NODEJS EXPRESS POSTGRESQL.
 
 ### Screenshots
-![image](https://github.com/elmoctarebnou/blogeme-client/issues/new)
+![image](https://user-images.githubusercontent.com/60305701/92967306-a153e100-f43e-11ea-9104-147c012a6ade.png)
 
 ### RESTFUL API
 https://github.com/elmoctarebnou/blogeme-api
