@@ -8,7 +8,7 @@
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
 }
-@media only screen and (min-width: 800px){
+@media only screen and (min-device-width: 600px){
   .footer{
     height: 50px;
   }

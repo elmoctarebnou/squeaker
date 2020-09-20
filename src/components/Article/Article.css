@@ -55,7 +55,7 @@ ul{
   flex-direction: column;
   align-items: center;
 }
-textarea{
+.comments-form textarea{
   font-size: 3rem;
   width: 80vw;
   height: 15vh;
@@ -97,7 +97,7 @@ ul{
   margin-top: 30px ;
   box-shadow:10px 10px 5px rgb(0, 0, 0);
 }
-@media only screen and (min-width: 1000px){
+@media only screen and (min-device-width: 600px){
   .article h1{
     font-size: 2rem;
   }
@@ -112,7 +112,7 @@ ul{
   .new-comment h1{
     font-size: 1.5rem;
   }
-  textarea{
+  .comments-form textarea{
     font-size: 1.2rem;
     width: 60vw;
     height: 20vh;

@@ -16,6 +16,10 @@
 }
 .article-div h1{
   color: rgb(36, 36, 36);
+  text-align: center;
+}
+.article-div h1:hover{
+  color:  rgb(121, 40, 40);
 }
 
 .article-div p{
@@ -24,7 +28,7 @@
   letter-spacing: 1px;
   line-height:50px;
 }
-@media only screen and (min-width: 1000px){
+@media only screen and (min-device-width: 600px){
   .article-div p{
     font-size: 1.3rem;
     line-height:30px;

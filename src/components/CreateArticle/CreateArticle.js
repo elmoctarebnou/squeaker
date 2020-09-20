@@ -10,20 +10,19 @@ export default class CreateArticleForm extends React.Component {
   handleUpdate = (event) => {
     this.setState({[event.currentTarget.name]: event.currentTarget.value})
   }
-  handleSubmit = async (event) => {
+  handleSubmit = (event) => {
     event.preventDefault();
-    try {
-      const newArticle = {
-      title: this.state.title,
-      content: this.state.content,
-      author_id: this.state.author_id
-      }
-      await ApiService.postArticle(newArticle);
-      this.props.history.push('/')
-    } catch (error) {
-      console.log(error)
+    const newArticle = {
+    title: this.state.title,
+    content: this.state.content,
+    author_id: this.state.author_id
     }
-    
+    ApiService.postArticle(newArticle)
+    .then(res => console.log('Article posted'))
+    .catch(err => {
+      console.log(err)
+    });
+    this.props.history.push('/'); 
   }
   render(){
     return(

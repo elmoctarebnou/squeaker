@@ -9,12 +9,12 @@ import Article from '../Article/Article'
 import Footer from '../Footer/Footer'
 import CreateArticle from '../CreateArticle/CreateArticle'
 import TokenService from '../../services/token-service'
-import Particles from 'react-particles-js'
+import ParticlesComponent from 'react-particles-js'
 import particlesOption from '../../services/particlesParams'
 import './App.css';
 
 
-
+const Particles = (process.env['NODE_ENV'] !== 'test') ? ParticlesComponent : (() => null);
 
 class App extends React.Component{
   state = {
@@ -28,9 +28,7 @@ class App extends React.Component{
   handleLogOut = () => {
     this.setState({user_id: null, login: false})
     TokenService.clearAuthToken();
-    
   }
-  
   render(){
     return (
       <>

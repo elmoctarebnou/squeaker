@@ -13,13 +13,15 @@ export default class Article extends React.Component {
       newComment: ''
     }
   }
-  async componentDidMount(){
-    try {
-      const data = await ApiService.getArticle(this.state.id);
-      this.setState({article: data.article, comments: data.articleComments});
-    } catch (error) {
+  fetchData = () => {
+      ApiService.getArticle(this.state.id)
+      .then(res => this.setState({article: res.article, comments: res.articleComments}))
+      .catch ((error) => {
       console.log(error);
-    }
+      });
+  }
+  componentDidMount(){
+    this.fetchData();
   }
   handleDeleteArticle = async (event) => {
     event.preventDefault();
@@ -29,21 +31,23 @@ export default class Article extends React.Component {
   updateNewComment = (event) => {
     this.setState({[event.target.name]: event.target.value})
   }
-  handleDeleteComment = async (id) => {
-    console.log(id);
-    await ApiService.deleteComment(id);
-    const updatedComments = this.state.comments.filter(comment => comment.id !== id)
-    this.setState({comments: updatedComments});
+  handleDeleteComment = (id) => {
+    ApiService.deleteComment(id)
+    .then(() => this.fetchData())
+    .catch(err => console.log(err));
+    
   }
-  handleSubmitNewComment = async (event) => {
+  handleSubmitNewComment = (event) => {
     event.preventDefault();
     const newComment = {
       text: this.state.newComment,
       article_id: this.state.id,
       user_id: this.state.article.author_id
     }
-    await ApiService.postComment(newComment);
-    this.props.history.push(`/articles/${this.props.match.params.id}`)
+    ApiService.postComment(newComment)
+    .then(() => this.fetchData())
+    .catch((err) => console.log(err));
+    
   }
   render(){
     const commentsList = this.state.comments.map((comment) => {

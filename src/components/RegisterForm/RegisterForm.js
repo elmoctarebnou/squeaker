@@ -44,7 +44,7 @@ export default class RegisterForm extends React.Component {
     return (
       <>
         <form onSubmit={this.handleSubmit} className='register-form'>
-          <h1>WELCOME TO BLOGEME CREATE AN ACCOUNT FOR FREE!</h1>
+          <h1>WELCOME TO BLOGEME <br/> THIS BLOG APP ALLOWS THE USER TO POST<br/> ARTICLES AND COMMENTS.<br/>CREATE AN ACCOUNT!</h1>
           <h2>{this.state.error_password ? 'PASSWORDS DO NOT MATCH!' : ''}</h2>
           <input onChange={this.handleChange} name='full_name' type='text' placeholder='Full name' required></input>
           <br/>

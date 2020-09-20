@@ -12,7 +12,7 @@
   opacity: .8;
   cursor: pointer;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-device-width: 600px){
   .delete-comment{
     font-size: 1rem;
     width: 10vw;

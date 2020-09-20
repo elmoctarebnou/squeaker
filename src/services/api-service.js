@@ -44,11 +44,6 @@ const ApiService = {
       },
       body: JSON.stringify(newComment),
     })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
   },
   deleteComment(comment_id){
     return fetch(`${config.API_ENDPOINT}/comments/${comment_id}`, {
@@ -58,11 +53,6 @@ const ApiService = {
       },
       body: JSON.stringify({id: comment_id})
     })
-    .then(res =>
-      (!res.ok)
-        ? res.json().then(e => Promise.reject(e))
-        : res.json()
-    )
   },
   loginUser(user){
     return fetch(`${config.API_ENDPOINT}/login`, {

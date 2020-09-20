@@ -11,20 +11,18 @@ export default class ArticlesList extends React.Component {
       token: this.props.token
     }
   }
+  fetchArticles = () => {
+    ApiService.getArticles(this.state.token)
+    .then((res) => this.setState({articles : res}));
+  }
   componentDidMount = async () => {
-    try {
-      const data = await ApiService.getArticles(this.state.token);
-      this.setState({articles : data})
-    } catch (error) {
-      console.error(error.message);
-    }
+    this.fetchArticles();
   }
   render() {
     const allArticles = this.state.articles.map((article) => {
       return (
       <div className= 'article-div' key={article.id}>
         <Link to={`/articles/${article.id}`}><h1>{article.title}</h1></Link>
-        <p>{article.content}</p>
       </div>
       )
     })
