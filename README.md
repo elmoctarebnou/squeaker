@@ -17,6 +17,9 @@ REACT CSS NODEJS EXPRESS POSTGRESQL.
 ### RESTFUL API
 https://github.com/elmoctarebnou/blogeme-api
 
+### START
+`npm start`
+
 ### TEST
 `npm test`
 
