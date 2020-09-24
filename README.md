@@ -1,5 +1,5 @@
 ### BLOGEME
-BLOGEME is a full stack blog app built as a capstone I project.
+BLOGEME is a full stack blog app built as a capstone 1 project.
 
 ### LIVE LINK
 https://blogeme-client.elmoctarebnou.vercel.app/
