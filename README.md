@@ -1,6 +1,9 @@
 ### BLOGEME
 BLOGEME is a full stack blog app built as a capstone I project.
 
+### LIVE LINK
+https://blogeme-client.elmoctarebnou.vercel.app/
+
 ### TECK STACK
 REACT CSS NODEJS EXPRESS POSTGRESQL.
 
