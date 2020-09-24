@@ -5,7 +5,7 @@ BLOGEME is a full stack blog app built as a capstone I project.
 https://blogeme-client.elmoctarebnou.vercel.app/
 
 ### DEMO CREDENTIALS
-username: leo
+username: leo <br/>
 password: leo
 
 ### TECK STACK
