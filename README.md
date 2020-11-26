@@ -5,7 +5,7 @@ Squeaker is a full stack microblogging and social network app.
 REACT JS<br/> NODE JS<br/> EXPRESS JS<br/> POSTGRESQL
 
 ### Screenshots
-![image](https://user-images.githubusercontent.com/60305701/92967306-a153e100-f43e-11ea-9104-147c012a6ade.png)
+![image](https://user-images.githubusercontent.com/60305701/100314249-d40c7080-2f7b-11eb-8993-d4f63a9f89fb.png)
 
 ### RESTFUL API
 
