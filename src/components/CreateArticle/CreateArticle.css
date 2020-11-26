@@ -1,51 +1,63 @@
-.form-new-article{
+.form-squeak{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90vw;
   height: 85vh;
-  margin: 0 auto;
+  margin: 10rem auto;
 }
-.form-new-article input{
+.form-squeak input{
   font-size: 3rem;
-  width: 50vw;
-  height: 3vh;
+  width: 90vw;
   margin: 2rem 0;
-}
-.form-new-article button{
-  font-size: 3rem;
-  width: 50vw;
-  height: 3vh;
-  margin: 2rem 0;
-  background-color: rgb(75, 95, 115);
-  color: white;
+  padding: 1rem 1rem;
+  border-radius: 10px;
   border: none;
 }
-.form-new-article button:hover{
-  opacity: .8;
-  cursor: pointer;
-}
-.form-new-article textarea{
+.form-squeak button{
   font-size: 3rem;
-  width: 80vw;
-  height: 60vh;
+  margin: 2rem 0;
+  padding: 1rem 6rem;
+  background: none;
+  color: white;
+  border-radius: 50px;
+  border: 1px solid #FF914D;
+  letter-spacing: 1px;
+  transition: 200ms;
+}
+.form-squeak button:hover{
+  cursor: pointer;
+  background-color: #FF914D;
+  color: black;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+}
+.form-squeak textarea{
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  width: 90vw;
+  height: 600px;
+  border-radius: 10px;
+  border: none;
 }
 @media only screen and (min-device-width: 600px){
-  .form-new-article{
-    margin-top: 2rem;
+  .form-squeak{
+    margin-top: 5rem;
+    
   }
-  .form-new-article input{
+  .form-squeak input{
     font-size: 1.5rem;
-    height: 4vh;
     margin: 1rem 0;
+    max-width: 600px;
   }
-  .form-new-article textarea{
-    font-size: 2rem;
+  .form-squeak textarea{
+    font-size: 1.5rem;
+    max-width: 600px;
   }
-  .form-new-article button{
-    font-size: 2rem;
-    width: 150px;
-    height: 60px;
+  .form-squeak button{
+    font-size: 1.5rem;
     margin: 2rem 0;
+    padding: .5rem 5rem;
   }
 }

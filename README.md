@@ -1,5 +1,5 @@
-### BLOGEME
-BLOGEME is a full stack blog app built as a capstone I project.
+### Squeaker
+Squeaker is a full stack microblogging and social network app.
 
 ### TECK STACK
 REACT CSS NODEJS EXPRESS POSTGRESQL.
@@ -8,7 +8,7 @@ REACT CSS NODEJS EXPRESS POSTGRESQL.
 ![image](https://user-images.githubusercontent.com/60305701/92967306-a153e100-f43e-11ea-9104-147c012a6ade.png)
 
 ### RESTFUL API
-https://github.com/elmoctarebnou/blogeme-api
+
 
 ### TEST
 `npm test`

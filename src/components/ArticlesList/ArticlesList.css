@@ -1,36 +1,74 @@
 .flex-articles{
-  margin-top: 5rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  color: black;
 }
 .article-div{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   width: 85vw;
   margin: 1rem auto;
   padding: 1rem;
   background-color: white;
+  border-radius: 10px;
 }
-.article-div h1{
-  color: rgb(36, 36, 36);
-  text-align: center;
-}
-.article-div h1:hover{
-  color:  rgb(121, 40, 40);
+.article-div:hover{
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
-.article-div p{
-  font-size: 2.5rem;
-  color: rgb(36, 36, 36);
-  letter-spacing: 1px;
-  line-height:50px;
+.article-div .head{
+  display: flex;
+  flex-direction: column;
+}
+.head .author{
+  color: #4484ce;
+  font-size: 3rem;
+}
+.head .title{
+  color: black;
+  text-align: left;
+  font-weight: 500;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.info .comments {
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 40vw;
+}
+.info .comments i{
+  margin-right: .5rem;
+
+}
+.info .date {
+  color: black;
+  display: flex;
+  flex-direction: row;
 }
 @media only screen and (min-device-width: 600px){
-  .article-div p{
-    font-size: 1.3rem;
-    line-height:30px;
+  .flex-articles{
+    margin-top: 5rem;
+  }
+  .article-div{
+    max-width: 800px;
+  }
+  .head .author{
+    font-size: 1.5rem;
+  }
+  .info .comments{
+    width: 150px;
   }
 }

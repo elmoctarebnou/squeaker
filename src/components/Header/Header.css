@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .hide {
   display: none;
 }
@@ -13,42 +18,78 @@ a {
 }
 nav {
   width: 100vw;
-  height: 100px;
-  margin-bottom: 10rem;
-  padding: 1rem 0;
-  background-color: rgb(255, 255, 255);
+  height: 105px;
+  padding: 0 1rem;
+  background:none;
+  position: fixed;
+}
+.scroll{
+  background-color: white;
+}
+
+nav a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav img {
+  font-size: 3rem;
+  width: 100px;
+  margin-right: 1rem;
 }
 .logo {
-  color: rgb(121, 40, 40);
+  color: white;
   font-size: 4rem;
-  font-weight: bold;
-  margin: 1rem 1rem;
+  letter-spacing: 1px;
 }
 .register:hover {
   opacity: .8;
   cursor: pointer;
 }
-.login:hover {
-  opacity: .8;
-  cursor: pointer;
-  margin-right: .5rem;
+.squeak {
+  border: 1px solid #FF914D;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .8rem 2rem;
+  border-radius: 50px;
+  transition: 200ms;
+  letter-spacing: 1px;
+}
+.squeak:hover {
+  background-color: #FF914D;
+  box-shadow: 2px 2px 2px black;
+  color: black;
 }
 .login{
   color: white;
-  background-color: rgb(121, 40, 40);
   text-decoration: none;
   font-weight: 500;
-  padding: 1rem;
-  
+  padding: .8rem 2rem;
+  border: 1px solid #FF914D;
+  border-radius: 50px;
+  transition: 200ms;
+  letter-spacing: 1px;
+}
+.login:hover {
+  background-color: #FF914D;
+  box-shadow: 2px 2px 2px black;
+  color: black;
 }
 nav .button {
   align-items: center;
 }
+.black{
+  color: black;
+}
 @media only screen and (min-device-width: 600px){
   nav{
-    height: 50px;
-    padding: .5rem 0;
+    height: 60px;
     margin-bottom: 5rem;
+    padding: 0 1rem;
+  }
+  nav img {
+    width: 60px;
   }
   a{
     font-size: 1rem;
@@ -58,7 +99,12 @@ nav .button {
     font-size: 2rem;
   }
   .login{
-    padding: .5rem .8rem;
+    padding: .3rem 1.5rem;
+    font-size: 1.3rem;
+  }
+  .squeak{
+    padding: .3rem 1.5rem;
+    font-size: 1.3rem;
   }
 
 }

@@ -31,12 +31,23 @@ export default class RegisterForm extends React.Component {
         nickname: data.nick_name
       };
       const res = await ApiService.createUser(newUser);
-      console.log(res)
-      const {user, token} = res;
-      TokenService.saveAuthToken(token)
+      const {user, authToken} = res;
+      TokenService.saveAuthToken(authToken)
       this.props.handleLogin(user.id);
       this.props.history.push('/')
     };
+  }
+  handleDemo = async(event) => {
+    event.preventDefault();
+    let demoUser = {
+      user_name:'leo',
+      password: 'Leo12345@'
+    }
+    const res = await ApiService.loginUser(demoUser);
+    const {user, authToken} = res;
+    TokenService.saveAuthToken(authToken, user.id)
+    this.props.handleLogin();
+    this.props.history.push('/')
   }
   
   render(){
@@ -44,7 +55,11 @@ export default class RegisterForm extends React.Component {
     return (
       <>
         <form onSubmit={this.handleSubmit} className='register-form'>
-          <h1>WELCOME TO BLOGEME <br/> THIS BLOG APP ALLOWS THE USER TO POST<br/> ARTICLES AND COMMENTS.<br/>CREATE AN ACCOUNT!</h1>
+          <h1>
+            Welcome to Squeaker!<br/>
+            Create an account to start.<br/>
+            <br/>
+           </h1>
           <h2>{this.state.error_password ? 'PASSWORDS DO NOT MATCH!' : ''}</h2>
           <input onChange={this.handleChange} name='full_name' type='text' placeholder='Full name' required></input>
           <br/>
@@ -54,7 +69,10 @@ export default class RegisterForm extends React.Component {
           <br/>
           <input onChange={this.handleChange} name='confirm_password' type='password' placeholder='Confirm Password' required></input>
           <br/>
-          <button>Create an Account</button>
+          <div className='buttons'>
+            <button >Create</button>
+            <button type='submit' onClick={this.handleDemo}>Demo</button>
+          </div>
         </form>
       </>
     )

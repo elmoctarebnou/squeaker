@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
-  margin: 0 auto 5rem;
+  margin: 15rem auto 2rem;
   padding: 2rem;
   width: 90vw;
-  height: 80vh;
+  height: 86vh;
 }
 .register-form h1{
   color: white;
@@ -19,34 +19,54 @@
   font-size: 3rem;
   width: 60vw;
   height: 100px;
-}
-.register-form button {
-  background-color: rgb(75, 95, 115);
-  color: white;
-  border: none;
-  font-size: 2.5rem;
-  margin-top: 2rem;
   padding: .5rem;
-  height: 100px;
-  width: 50vw;
+  border-radius: 10px;
+  border: none;
 }
-.register-form button:hover{
-  opacity: .8;
+.buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+}
+.buttons button {
+  background:none;
+  color: white;
+  border: 1px solid #FF914D;
+  border-radius: 50px;
+  font-size: 2.5rem;
+  margin: 2rem 1rem;
+  padding: .5rem 3rem;
+  height: 100px;
+  width: 300px;
+  transition: 200ms;
+  letter-spacing: 2px;
+}
+.buttons button:hover{
+  background-color: #FF914D;
+  color: black;
+  box-shadow: 2px 2px 2px black;
   cursor: pointer;
 }
 @media only screen and (min-device-width: 600px){
   .register-form {
     font-size: 1rem;
-    width: 90vw;
-    height: 800px;
-    margin-bottom: 15rem;
+    width: 500px;
+    margin: 5rem auto;
+  }
+  .register-form h1{
+    font-size: 2rem;
   }
   .register-form input{
     font-size: 1.3rem;
-    height: 30px;
-    width: 250px;
+    height: 50px;
+    width: 400px;
   }
-  .register-form button{
+  .buttons {
+    width: 400px;
+  }
+  .buttons button{
     font-size: 1.3rem;
     height: 50px;
     width: 250px;

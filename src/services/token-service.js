@@ -1,4 +1,4 @@
-const tokenKey = 'blogEMEToken';
+const tokenKey = 'elmoctarebnousqueaker';
 const userId = 'userId';
 
 const TokenService = {

@@ -3,14 +3,15 @@
   flex-direction: column;
   align-items: center;
   font-size: 2rem;
-  margin: 0 auto 5rem;
+  margin: 15rem auto 2rem;
   padding: 2rem;
   width: 80vw;
-  height: 80vh;
+  height: 86vh;
 }
 .login-form h1 {
   color: white;
   text-align: center;
+  margin-bottom: 5rem;
 }
 .login-form h2 {
   color: red;
@@ -19,31 +20,42 @@
   font-size: 3rem;
   width: 60vw;
   height: 100px;
+  padding: .5rem;
+  border-radius: 10px;
+  border: none;
 }
 .login-form button {
-  background-color: rgb(75, 95, 115);
+  background:none;
   color: white;
-  border: none;
+  border: 1px solid #FF914D;
+  border-radius: 50px;
   font-size: 2.5rem;
-  margin-top: 2rem;
-  padding: .5rem;
+  margin: 2rem 1rem;
+  padding: .5rem 3rem;
   height: 100px;
-  width: 50vw;
+  width: 300px;
+  transition: 200ms;
+  letter-spacing: 2px;
 }
 .login-form button:hover{
-  opacity: .8;
+  background-color: #FF914D;
+  color: black;
+  box-shadow: 2px 2px 2px black;
   cursor: pointer;
 }
 @media only screen and (min-device-width: 600px){
   .login-form {
     font-size: 1rem;
-    width: 90vw;
-    margin-bottom: 20rem;
+    width: 500px;
+    margin: 5rem auto;
+  }
+  .login-form h1{
+    margin-bottom: 2rem;
   }
   .login-form input {
     font-size: 1.3rem;
-    height: 30px;
-    width: 250px;
+    height: 50px;
+    width: 400px;
   }
   .login-form button {
     font-size: 1.3rem;

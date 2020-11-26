@@ -36,10 +36,10 @@ class App extends React.Component{
         <Header handleLogOut={this.handleLogOut} login={this.state}/>
         <Switch>
           <Route exact path='/' render={(props) => this.state.login ? (<ArticlesList token={this.state.token} {...props}/>) : <RegisterForm {...props} handleLogin={this.handleLogin}/> }/>
-          <Route exact path='/Register' render={(props) => <RegisterForm {...props} handleLogin={this.handleLogin}/>}/>
+          <Route exact path='/register' render={(props) => <RegisterForm {...props} handleLogin={this.handleLogin}/>}/>
           <Route exact path='/login' render={(props) => <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
-          <Route exact path='/articles/:id' render={(props) => this.state.login ? (<Article {...props}/>) : <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
-          <Route exact path='/new-article' render={(props) => this.state.login ? (<CreateArticle {...props} user_id={this.state.user_id}/>) : <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
+          <Route exact path='/squeakes/:id' render={(props) => this.state.login ? (<Article {...props}/>) : <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
+          <Route exact path='/new-squeak' render={(props) => this.state.login ? (<CreateArticle {...props} user_id={this.state.user_id}/>) : <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
         </Switch>
         <Footer/>
       </>

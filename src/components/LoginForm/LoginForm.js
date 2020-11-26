@@ -21,8 +21,8 @@ export default class LoginForm extends React.Component {
       password
     }
     const res = await ApiService.loginUser(findUser);
-    const {user, token} = res;
-    TokenService.saveAuthToken(token, user.id)
+    const {user, authToken} = res;
+    TokenService.saveAuthToken(authToken, user.id)
     this.props.handleLogin();
     this.props.history.push('/')
   }
@@ -30,7 +30,7 @@ export default class LoginForm extends React.Component {
     return(
       <>
         <form onSubmit={this.handleSubmit} className='login-form'>
-          <h1>SIGN IN TO BLOGEME!</h1>
+          <h1>Sign in to Squeaker!</h1>
           <h2>{this.state.loginError ? 'USERNAME OR PASSWORD WRONG!' : ''}</h2>
           <input onChange={this.handleUpdate} name='user_name' type='text' placeholder='Username' required></input>
           <br/>

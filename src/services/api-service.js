@@ -1,11 +1,13 @@
 import config from '../config'
-import TokenService from '../services/token-service';
+import TokenService from './token-service';
 const ApiService = {
   getArticles() {
     return fetch(`${config.API_ENDPOINT}/articles`,{
+
       method: 'GET',
       headers: {
-        'authorization': TokenService.getAuthToken()
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
       }
     })
       .then(res =>
@@ -15,7 +17,13 @@ const ApiService = {
       )
   },
   getArticle(articleId) {
-    return fetch(`${config.API_ENDPOINT}/articles/${articleId}`)
+    return fetch(`${config.API_ENDPOINT}/articles/${articleId}`, {
+      method: 'GET',
+      headers: {
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
+      }
+    })
       .then(res =>
         (!res.ok)
           ? res.json().then(e => Promise.reject(e))
@@ -26,7 +34,8 @@ const ApiService = {
     return fetch(`${config.API_ENDPOINT}/articles`, {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(newArticle)
     })
@@ -34,13 +43,18 @@ const ApiService = {
   deleteArticle(articleId){
     return fetch(`${config.API_ENDPOINT}/articles/${articleId}`, {
       method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
+      }
     })
   },
   postComment(newComment) {
     return fetch(`${config.API_ENDPOINT}/comments`, {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(newComment),
     })
@@ -49,15 +63,19 @@ const ApiService = {
     return fetch(`${config.API_ENDPOINT}/comments/${comment_id}`, {
       method: 'DELETE',
       headers: {
-        'content-type': 'application/json'
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({id: comment_id})
     })
   },
   loginUser(user){
-    return fetch(`${config.API_ENDPOINT}/login`, {
+    return fetch(`${config.API_ENDPOINT}/auth`, {
       method: 'POST',
-      headers: {'content-type': 'application/json'},
+      headers: {
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify(user)
     })
     .then(res =>
@@ -69,17 +87,12 @@ const ApiService = {
   createUser(user){
     return fetch(`${config.API_ENDPOINT}/users`, {
       method: 'POST',
-      headers:{'content-type': 'application/json'},
+      headers: {
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify(user)
     })
-    .then(res =>
-      (!res.ok)
-        ? res.json().then(e => Promise.reject(e))
-        : res.json()
-    )
-  },
-  getUsers(){
-    return fetch(`${config.API_ENDPOINT}/users`)
     .then(res =>
       (!res.ok)
         ? res.json().then(e => Promise.reject(e))
