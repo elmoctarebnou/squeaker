@@ -24,9 +24,13 @@
   display: flex;
   flex-direction: column;
 }
+.head .author i{
+  color: #FF914D;
+  
+}
 .head .author{
-  color: #4484ce;
-  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-size: 4rem;
 }
 .head .title{
   color: black;
@@ -66,7 +70,7 @@
     max-width: 800px;
   }
   .head .author{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .info .comments{
     width: 150px;
