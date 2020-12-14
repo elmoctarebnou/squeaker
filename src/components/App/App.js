@@ -12,6 +12,7 @@ import TokenService from '../../services/token-service'
 import ParticlesComponent from 'react-particles-js'
 import particlesOption from '../../services/particlesParams'
 import './App.css';
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation';
 
 
 const Particles = (process.env['NODE_ENV'] !== 'test') ? ParticlesComponent : (() => null);
@@ -40,6 +41,7 @@ class App extends React.Component{
           <Route exact path='/login' render={(props) => <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
           <Route exact path='/squeakes/:id' render={(props) => this.state.login ? (<Article {...props}/>) : <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
           <Route exact path='/new-squeak' render={(props) => this.state.login ? (<CreateArticle {...props} user_id={this.state.user_id}/>) : <LoginForm {...props} handleLogin={this.handleLogin}/>}/>
+          <Route exact path='/loading' component={LoadingAnimation}/>
         </Switch>
         <Footer/>
       </>

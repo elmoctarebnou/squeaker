@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import ApiService from '../../services/api-service';
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 import './ArticlesList.css';
 
 export default class ArticlesList extends React.Component {
@@ -34,7 +35,7 @@ export default class ArticlesList extends React.Component {
     })
     return (
         <div className='flex-articles'>
-          {this.state.articles ? allArticles : <h3>...</h3>}
+          {this.state.articles.length !== 0 ? allArticles : <LoadingAnimation/>}
         </div>
       )
   }

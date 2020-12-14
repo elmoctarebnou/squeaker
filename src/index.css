@@ -12,6 +12,7 @@ body {
 }
 #root{
   width: 100vw;
+  height: 100vh;
 }
 h1{
   color: rgb(36, 36, 36);

@@ -1,6 +1,7 @@
 import React from 'react';
 import ApiService from '../../services/api-service';
 import ReactMarkdown from 'react-markdown'
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 import './Article.css'
 
 export default class Article extends React.Component {
@@ -81,8 +82,8 @@ export default class Article extends React.Component {
         )
       }
     })
-    return(
-      <div className='article-page'>
+    return(this.state.article.title
+      ?<div className='article-page'>
         <div key={this.state.id} className='article'>
           <h1>{article.title}</h1>
           <div className='top'>
@@ -103,6 +104,7 @@ export default class Article extends React.Component {
           {commentsList}
         </ul>
       </div>
+      : <LoadingAnimation/>
     )
   }
 }

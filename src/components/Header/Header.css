@@ -22,9 +22,7 @@ nav {
   padding: 0 1rem;
   background:none;
   position: fixed;
-}
-.scroll{
-  background-color: white;
+  background-color:rgb(36, 36, 36);
 }
 
 nav a {
@@ -79,9 +77,7 @@ nav img {
 nav .button {
   align-items: center;
 }
-.black{
-  color: black;
-}
+
 @media only screen and (min-device-width: 600px){
   nav{
     height: 60px;
