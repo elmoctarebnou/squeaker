@@ -1,6 +1,7 @@
 import React from 'react';
 import ApiService from '../../services/api-service';
 import TokenService from '../../services/token-service'
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
 import './RegisterForm.css'
 
 
@@ -11,7 +12,8 @@ export default class RegisterForm extends React.Component {
       nick_name:'',
       password:'',
       confirm_password:'',
-      error_password: false
+      error_password: false,
+      loading: false
     }
   handleChange = (event) => {
     event.preventDefault();
@@ -39,6 +41,7 @@ export default class RegisterForm extends React.Component {
   }
   handleDemo = async(event) => {
     event.preventDefault();
+    this.setState({loading: true});
     let demoUser = {
       user_name:'leo',
       password: 'Leo12345@'
@@ -47,13 +50,15 @@ export default class RegisterForm extends React.Component {
     const {user, authToken} = res;
     TokenService.saveAuthToken(authToken, user.id)
     this.props.handleLogin();
+    this.setState({loading:false})
     this.props.history.push('/')
   }
   
   render(){
     
-    return (
-      <>
+    return (this.state.loading
+      ? <LoadingAnimation/>
+      :<>
         <form onSubmit={this.handleSubmit} className='register-form'>
           <h1>
             Welcome to Squeaker!<br/>
