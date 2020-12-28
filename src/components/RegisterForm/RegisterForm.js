@@ -35,7 +35,7 @@ export default class RegisterForm extends React.Component {
       const res = await ApiService.createUser(newUser);
       const {user, authToken} = res;
       TokenService.saveAuthToken(authToken)
-      this.props.handleLogin(user.id);
+      this.props.handleLogin();
       this.props.history.push('/')
     };
   }
@@ -48,7 +48,7 @@ export default class RegisterForm extends React.Component {
     }
     const res = await ApiService.loginUser(demoUser);
     const {user, authToken} = res;
-    TokenService.saveAuthToken(authToken, user.id)
+    TokenService.saveAuthToken(authToken, user.id, user.full_name)
     this.props.handleLogin();
     this.setState({loading:false})
     this.props.history.push('/')

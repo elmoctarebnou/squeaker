@@ -68,7 +68,7 @@ export default class Article extends React.Component {
             <h3 className='comment-text'>{comment.comment}</h3>
             <div>
               <p><i className="far fa-clock"></i> {comment.date_ft.substring(3, 10)} {comment.date_ft.substring(15, 21)} CT</p>
-              <button id={comment.id} type='submit' onClick={this.handleDeleteComment}><i className="fas fa-trash"></i></button>
+              <button id={comment.id} type='submit' onClick={this.handleDeleteComment}><i className="fas fa-trash"></i>  Delete</button>
             </div>
           </div>
         )
@@ -94,7 +94,7 @@ export default class Article extends React.Component {
           {deleteArticle}
         </div>
         <div className='comments'>
-          <h1>Discussion <i className="far fa-comment"></i></h1>
+          <h1>Discussion</h1>
           <form onSubmit={this.handleSubmitNewComment}className='comments-form'>
             <textarea value={this.state.newComment} onChange={this.updateNewComment} name='newComment' placeholder='Comment on this squeak' maxLength='100'></textarea>
             <button>Submit</button>
