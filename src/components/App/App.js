@@ -20,11 +20,12 @@ const Particles = (process.env['NODE_ENV'] !== 'test') ? ParticlesComponent : ((
 class App extends React.Component{
   state = {
     login: TokenService.hasAuthToken(),
-    user_id: TokenService.getUserId()
+    user_id: TokenService.getUserId(),
+    fullName: TokenService.getFullName()
   }
   
   handleLogin = () => {
-    this.setState({user_id: TokenService.getUserId(), login: true})
+    this.setState({user_id: TokenService.getUserId(), login: true, fullName: TokenService.getFullName()})
   }
   handleLogOut = () => {
     this.setState({user_id: null, login: false})

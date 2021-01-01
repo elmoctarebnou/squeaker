@@ -6,15 +6,15 @@ import logo from './squeak.png'
 export default class Header extends React.Component {
   state = {
     hasToken: TokenService.hasAuthToken(),
-    fullName: TokenService.getFullName(),
+    fullName: this.props.login.fullName,
   }
  
   render() {
     const login = <a href='/login'><span className='login'>Log In</span></a>;
     const signOut = <>
-      <span className='user-name'><i className="far fa-user"></i> {this.state.fullName}</span>
+      <span className='user-name'><i className="far fa-user"></i> {this.state.fullName ? this.state.fullName : TokenService.getFullName()}</span>
       <a href='/new-squeak' className='squeak'><i className="fas fa-plus"></i></a>
-      <a href='/login' onClick={this.props.handleLogOut}><span className='login'>Sign out</span></a>
+      <a href='/login' onClick={this.props.handleLogOut}><span className='login'>Sign Out</span></a>
     </>;
     return (
       <>

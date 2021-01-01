@@ -22,6 +22,7 @@ export default class RegisterForm extends React.Component {
   }
   handleSubmit = async (event) => {
     event.preventDefault();
+    this.setState({loading: true});
     const data = this.state;
     if(data.password !== data.confirm_password) this.setState({error_password: true})
     if(data.password === data.confirm_password) {
@@ -34,7 +35,7 @@ export default class RegisterForm extends React.Component {
       };
       const res = await ApiService.createUser(newUser);
       const {user, authToken} = res;
-      TokenService.saveAuthToken(authToken)
+      TokenService.saveAuthToken(authToken, user.id, user.full_name)
       this.props.handleLogin();
       this.props.history.push('/')
     };
@@ -43,8 +44,8 @@ export default class RegisterForm extends React.Component {
     event.preventDefault();
     this.setState({loading: true});
     let demoUser = {
-      user_name:'leo',
-      password: 'Leo12345@'
+      user_name:'elon',
+      password: 'Elon123@'
     }
     const res = await ApiService.loginUser(demoUser);
     const {user, authToken} = res;
