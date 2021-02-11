@@ -154,13 +154,12 @@ h3{
   border: none;
   font-size: 2.5rem;
   color: black;
-  transition: 100ms;
+  transition: 200ms;
 }
 .comment button:hover{
   cursor: pointer;
-  text-shadow:  .1px .1px 1px rgb(0, 0, 0);
   color: firebrick;
-  transform: scale(.9);
+  transform: scale(.95);
 }
 @media only screen and (min-device-width: 600px){
   .article{
@@ -205,6 +204,7 @@ h3{
     font-size: 1.2rem;
     height: 20vh;
     width: 70vw;
+    max-width: 800px;
     height: 200px;
   }
   .comments-form button{
