@@ -5,8 +5,8 @@
   margin-top: 5rem;
   width: 100vw;
   height: 50px;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: rgb(36, 36, 36);
 }
 .footer p {
   margin: auto;

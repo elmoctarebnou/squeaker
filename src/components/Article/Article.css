@@ -78,7 +78,7 @@
 .comments-form textarea{
   font-size: 2rem;
   font-family: Arial, Helvetica, sans-serif;
-  width: 700px;
+  width: 80vw;
   height: 300px;
   padding: 1rem;
   border: 1px solid;
@@ -152,13 +152,13 @@ h3{
 .comment button {
   background-color: white;
   border: none;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: black;
   transition: 100ms;
 }
 .comment button:hover{
   cursor: pointer;
-  text-shadow:1px 1px 1px rgb(0, 0, 0);
+  text-shadow:  .1px .1px 1px rgb(0, 0, 0);
   color: firebrick;
   transform: scale(.9);
 }
@@ -204,7 +204,7 @@ h3{
   .comments-form textarea{
     font-size: 1.2rem;
     height: 20vh;
-    width: 600px;
+    width: 70vw;
     height: 200px;
   }
   .comments-form button{
@@ -213,7 +213,7 @@ h3{
     margin: 1rem 2rem;
   }
   .comment div button{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h3{
     font-size: 1.3rem;
