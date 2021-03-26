@@ -18,7 +18,7 @@ export default class LoginForm extends React.Component {
   handleSubmit = async(event) => {
     event.preventDefault();
     this.setState({loading: true});
-    const {user_name, password} = this.state;
+    const { user_name, password } = this.state;
     const findUser= {
       user_name,
       password

@@ -44,8 +44,8 @@ export default class RegisterForm extends React.Component {
     event.preventDefault();
     this.setState({loading: true});
     let demoUser = {
-      user_name:'elon',
-      password: 'Elon123@'
+      user_name:'messi',
+      password: 'Messi123@'
     }
     const res = await ApiService.loginUser(demoUser);
     const {user, authToken} = res;
